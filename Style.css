@@ -49,8 +49,10 @@ header #bloco_menu ul li a {
   color: white;
 }
 
-:active {
+header #bloco_menu  ul li a:hover {
   color: orange;
+  border-bottom: 2px solid orange;
+  transition: 50ms;
 }
 
 header #botao_header {
