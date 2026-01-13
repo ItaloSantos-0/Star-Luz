@@ -35,7 +35,7 @@ header #bloco_menu {
 }
 header #bloco_menu ul {
   display: flex;
-  gap: 20px;
+  gap: 60px;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -47,12 +47,16 @@ header #bloco_menu ul li {
 
 header #bloco_menu ul li a {
   color: white;
+  
 }
 
 header #bloco_menu  ul li a:hover {
   color: orange;
   border-bottom: 2px solid orange;
-  transition: 50ms;
+}
+
+a:hover {
+  transform: scaleX(1.5);
 }
 
 header #botao_header {
