@@ -5,9 +5,6 @@
   text-decoration: none;
   list-style: none;
   overflow-x: hidden;
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
 }
 
 body div#imagem_home {
@@ -35,7 +32,6 @@ header #bloco_logo {
 
 header img {
   height: 44px;
-  
 }
 
 header #bloco_menu {
@@ -45,6 +41,7 @@ header #bloco_menu {
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
 }
+
 header #bloco_menu ul {
   display: flex;
   gap: 60px;
@@ -76,7 +73,6 @@ header div#botao_header {
   align-items: center;
   width: 30%;
   height: 100%;
-
 }
 
 header #botao_header .botao_menu {
@@ -96,6 +92,7 @@ header #botao_header .botao_menu:hover {
 div #main_principal {
   background-color: blue;
 }
+
 div section #titulo1 {
   width: 100%;
   height: 600px;
@@ -132,17 +129,100 @@ main {
 }
 
 main #bloco_texto_main {
-  background-color: aqua;
+  color: white;
   max-width: 1120px;
-  width: 100%;
+  width: 800px;
   margin: auto;
+  border-radius: 10px;
   text-align: center;
-  
 }
 
 main #bloco_texto_main span {
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
+  color: #FFB300;
+}
+
+main #bloco_texto_main h1 {
+  margin-top: 15px;
+  font-size: 30px;
+}
+
+main #bloco_texto_main p {
+  margin-top: 20px;
+  color: #f2f2f26e;
+}
+
+body main #div_pai_principal {
+  display: flex;
   
+}
+
+main #conteudo_produtos {
+  color: #FFB300;
+  font-size: 30px;
+  height: 700px;
+  width: 100%;
+  border: solid red;
+  justify-content: center;
+  text-align: center;
+}
+
+main #conteudo_principal_produtos {
+  color: #FFB300;
+  border: solid red;
+  width: 100%;
+  height: 700px;
+}
+
+main div li ul {
+  color: #FFB300;
+}
+
+#div_pai_principal #conteudo_principal_produtos #bloco_produtos div{
+  border: solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 173px;
+}
+
+main #div_logo {
+  display: flex;
+  width: 1120px;
+}
+main #div_logo #conteiner_pai {
+  width: 100%;
+  display: flex;
+  margin: 50px auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+main #div_logo {
+  display: flex;
+}
+
+main #div_logo h1 {
+  color: white;
+  margin-top: 50px;
+  width: 100%;
+}
+
+main #div_logo p {
+  color: white;
+}
+
+main #div_logo #blocos_logo {
+  display: flex;
+}
+
+main #div_logo #blocos_logo #logo_1 {
+  display: flex;
+  gap: 0;
+}
+
+main #div_logo #blocos_logo img {
+  margin: 0;
+  width: 150px;
+  height: 150px;
 }
