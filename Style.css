@@ -232,10 +232,28 @@ main #div_logo #blocos_logo {
   width: 43%;
 }
 
+main img:hover {
+  width: 43%;
+  
+}
+
 main #div_logo #blocos_logo #logo_1 {
   display: flex;
   gap: 0;
   justify-content: space-between;
+
+}
+
+main #div_logo #blocos_logo #logo_1 .cor_logo {
+  background-color: white;
+  padding: 0px 10px;
+  fill: white;
+}
+
+main #div_logo #blocos_logo #logo_1 .cor_logo:hover {
+  transition: all 0.3s ease-in-out;
+  fill: white;
+  background-color: #0081C4;
 }
 
 main #div_logo #blocos_logo #logo_2 {
@@ -248,10 +266,6 @@ main #div_logo #blocos_logo #logo_3 {
   display: flex;
   gap: 0;
   justify-content: space-between;
-}
-
-main #div_logo #blocos_logo img:hover {
-  
 }
 
 main #div_logo #blocos_logo img {
