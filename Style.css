@@ -10,6 +10,8 @@
 body div#imagem_home {
   background-size: cover;
   background-image: url(img/luzexterna.png);
+  justify-content: center;
+  align-items: center;
 }
 
 header {
@@ -123,7 +125,7 @@ div section #titulo1 {
 }
 
 main {
-  width: 100vw;
+  width: 100%;
   background-color: black;
   padding: 40px;
 }
@@ -133,7 +135,6 @@ main #bloco_texto_main {
   max-width: 1120px;
   width: 800px;
   margin: auto;
-  border-radius: 10px;
   text-align: center;
 }
 
@@ -187,38 +188,70 @@ main div li ul {
 
 main #div_logo {
   display: flex;
-  width: 1120px;
-}
-main #div_logo #conteiner_pai {
-  width: 100%;
-  display: flex;
-  margin: 50px auto;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  width: 100%;
 }
 
-main #div_logo {
+main #div_logo #conteiner_pai {
+  width: 1120px;
   display: flex;
+  margin: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#div_logo #conteiner_pai #div_texto {
+  width: 700px;
+  height: 456px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 main #div_logo h1 {
   color: white;
-  margin-top: 50px;
-  width: 100%;
 }
 
 main #div_logo p {
   color: white;
 }
 
+main #div_logo button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0764ee;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
 main #div_logo #blocos_logo {
-  display: flex;
+  width: 43%;
 }
 
 main #div_logo #blocos_logo #logo_1 {
   display: flex;
   gap: 0;
+  justify-content: space-between;
+}
+
+main #div_logo #blocos_logo #logo_2 {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+}
+
+main #div_logo #blocos_logo #logo_3 {
+  display: flex;
+  gap: 0;
+  justify-content: space-between;
+}
+
+main #div_logo #blocos_logo img:hover {
+  
 }
 
 main #div_logo #blocos_logo img {
