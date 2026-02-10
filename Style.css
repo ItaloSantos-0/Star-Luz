@@ -52,22 +52,40 @@ header #bloco_menu ul {
   height: 100%;
 }
 
-header #bloco_menu ul li {
-  list-style: none;
-}
-
+/* Estado Base */
 header #bloco_menu ul li a {
   color: rgb(0, 0, 0);
+  display: inline-block;
+  position: relative; /* Necessário para posicionar a linha */
+  padding-bottom: 5px; /* Espaço para a linha não colar no texto */
+  transition: color 0.3s ease;
 }
 
+/* Criando a linha invisível (pseudo-elemento) */
+header #bloco_menu ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%; /* Começa com largura zero */
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: orange;
+  
+  /* A mágica da animação fluida */
+  transition: width 0.3s ease-in-out;
+}
+
+/* Estado Hover */
 header #bloco_menu ul li a:hover {
   color: orange;
-  border-bottom: 2px solid orange;
+  /* Não usamos transform aqui para não mover o texto */
 }
 
-li a:hover {
-  transform: scaleX(1.5);
+/* Quando passar o mouse no 'a', o 'after' cresce */
+header #bloco_menu ul li a:hover::after {
+  width: 100%; /* A linha preenche todo o espaço */
 }
+
 
 header div#botao_header {
   display: flex;
@@ -80,9 +98,11 @@ header div#botao_header {
 header #botao_header .botao_menu {
   color: white;
   padding: 10px 25px;
-  background-color:#0764ee;
+  background-color: #0764ee;
   border-radius: 10px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 header #botao_header .botao_menu:hover {
@@ -110,7 +130,7 @@ div section #titulo1 {
 }
 
 div section #titulo1::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -139,7 +159,7 @@ main #bloco_texto_main {
 }
 
 main #bloco_texto_main span {
-  color: #FFB300;
+  color: #ffb300;
 }
 
 main #bloco_texto_main h1 {
@@ -154,11 +174,10 @@ main #bloco_texto_main p {
 
 body main #div_pai_principal {
   display: flex;
-  
 }
 
 main #conteudo_produtos {
-  color: #FFB300;
+  color: #ffb300;
   font-size: 30px;
   height: 700px;
   width: 100%;
@@ -168,17 +187,17 @@ main #conteudo_produtos {
 }
 
 main #conteudo_principal_produtos {
-  color: #FFB300;
+  color: #ffb300;
   border: solid red;
   width: 100%;
   height: 700px;
 }
 
 main div li ul {
-  color: #FFB300;
+  color: #ffb300;
 }
 
-#div_pai_principal #conteudo_principal_produtos #bloco_produtos div{
+#div_pai_principal #conteudo_principal_produtos #bloco_produtos div {
   border: solid blue;
   display: flex;
   justify-content: center;
@@ -232,29 +251,66 @@ main #div_logo #blocos_logo {
   width: 43%;
 }
 
-main img:hover {
-  width: 43%;
-  
-}
-
 main #div_logo #blocos_logo #logo_1 {
   display: flex;
   gap: 0;
   justify-content: space-between;
-
 }
 
-main #div_logo #blocos_logo #logo_1 .cor_logo {
+.cor_philips {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center; /* Centraliza o SVG horizontalmente */
+  align-items: center;     /* Centraliza o SVG verticalmente */
   background-color: white;
-  padding: 0px 10px;
-  fill: white;
+  padding: 0 15px;
+  cursor: pointer;
+
+  /* O SEGREDO: Transição aplicada aqui garante entrada e saída suaves */
+  transition: background-color 0.4s ease-in-out, transform 0.3s ease;
 }
 
-main #div_logo #blocos_logo #logo_1 .cor_logo:hover {
-  transition: all 0.3s ease-in-out;
-  fill: white;
-  background-color: #0081C4;
+.cor_philips svg {
+  width: 100%; /* Garante que o SVG respeite o container */
+  height: auto;
 }
+
+.cor_philips path {
+  fill: #0081c4;
+  /* Transição para a cor do ícone */
+  transition: fill 0.4s ease-in-out; 
+}
+
+/* ESTADO HOVER */
+.cor_philips:hover {
+  background-color: #0081c4;
+}
+
+.cor_philips:hover path {
+  fill: #ffffff; /* O ícone fica branco quando o fundo fica azul */
+}
+
+/* 
+.cor_bitcino {
+  background-color: white;
+}
+
+.cor_bitcino path {
+  fill: #0081c4;
+  background-color: white;
+}
+
+.cor_bitcino:hover svg path {
+  transition: fill 0.3s ease-in-out;
+  fill: #fff;
+  background-color: #0081c4;
+}
+
+.cor_bitcinop:hover {
+  background-color: #0081c4;
+  transition: fill 1s ease-in-out;
+*/
 
 main #div_logo #blocos_logo #logo_2 {
   display: flex;
